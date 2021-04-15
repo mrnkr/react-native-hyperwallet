@@ -29,13 +29,13 @@ android {
   compileSdkVersion getExtOrIntegerDefault('compileSdkVersion')
   buildToolsVersion getExtOrDefault('buildToolsVersion')
   defaultConfig {
-    minSdkVersion 16
+    minSdkVersion 21
     targetSdkVersion getExtOrIntegerDefault('targetSdkVersion')
     versionCode 1
-    versionName "1.0"
-    
+    versionName "1.0.0-beta09"
+
   }
-  
+
   buildTypes {
     release {
       minifyEnabled false
@@ -126,5 +126,7 @@ def kotlin_version = getExtOrDefault('kotlinVersion')
 dependencies {
   // noinspection GradleDynamicVersion
   api 'com.facebook.react:react-native:+'
+  implementation 'com.hyperwallet.android:core-sdk:1.0.0-beta09'
+  implementation 'com.squareup.okhttp3:okhttp'
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
