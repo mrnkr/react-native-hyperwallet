@@ -24,8 +24,8 @@ class HyperwalletModule(reactContext: ReactApplicationContext) : ReactContextBas
     return ret
   }
 
-  @ReactMethod(isBlockingSynchronousMethod = true)
-  fun init(token: String) {
+  @ReactMethod
+  fun startup(token: String) {
     Hyperwallet.getInstance {
       it.onSuccess(token)
     }

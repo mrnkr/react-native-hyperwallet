@@ -38,7 +38,7 @@ export type BankAccount = {
 };
 
 type HyperwalletType = {
-  init(token: string): void;
+  startup(token: string): void;
   createBankAccount(config: HyperwalletConfig): Promise<BankAccount>;
 };
 

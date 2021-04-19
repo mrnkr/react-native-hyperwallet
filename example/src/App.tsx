@@ -29,7 +29,7 @@ export default function App() {
 
         console.log(value);
 
-        Hyperwallet.init(value);
+        Hyperwallet.startup(value);
         const res = await Hyperwallet.createBankAccount({
           transferMethodCountry: 'US',
           transferMethodCurrency: 'USD',
